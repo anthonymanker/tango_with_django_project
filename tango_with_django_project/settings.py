@@ -34,6 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 
 # Application definition
 
