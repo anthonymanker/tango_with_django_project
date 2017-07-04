@@ -46,11 +46,11 @@
             <a class="nav-link" href="{% url 'add_category' %}">Add a New Category</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'auth_logout' %}?next=/rango/">Logout</a>
+            <a class="nav-link" href="{% url 'auth_logout' %}?next=/rango/ %}">Logout</a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'registration_register' %}">Register Here</a>
+            <a class="nav-link" href="{% url 'regisitration_register' %}">Register Here</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'auth_login' %}">Login</a>
@@ -59,20 +59,18 @@
         </ul>
       </div>
     </nav>
-
-	<div class="container-fluid">
-		<div class="row">
-<!-- 			<div class="col-sm-3 col-md-2 sidebar">
-				{% block sidebar_block %}
-					{% get_category_list category %}
-				{% endblock %}
-			</div> -->
-			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> 
-				{% block body_block %}{% endblock %}
-			</div>
-		</div>
-	</div>
-
+    <div class="container-fluid">
+      <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        {% block sidebar_block %}
+          {% get_category_list category %}
+        {% endblock %}
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        {% block body_block %}{% endblock %}
+      </div>
+      </div>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
